@@ -14,15 +14,14 @@ mat_b = np.random.randint(1, 101, (size, size))
 
 compare_sign = input("Введите знак для сравнения матриц: < > или ==: ")
 mat_c = None
-match compare_sign:
-    case "<":
-        mat_c = mat_a < mat_b
-    case ">":
-        mat_c = mat_a > mat_b
-    case "==":
-        mat_c = mat_a == mat_b
-    case _:
-        print("Ошибка! Введено неверное значение")
-        exit(-1) 
+if compare_sign == "<":
+    mat_c = mat_a < mat_b
+elif compare_sign == ">":
+    mat_c = mat_a > mat_b
+elif compare_sign == "==":
+    mat_c = mat_a == mat_b
+else:
+    print("Ошибка! Введено неверное значение")
+    exit(-1)
 
 print(mat_c)
