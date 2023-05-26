@@ -43,6 +43,8 @@ def is_graph_tree(adj, parent_index=0, current_index=0, passed_points=[]):
             passed_points.extend(root)
             parent_index = current_index
             return is_graph_tree(adj, parent_index, i, passed_points)
+    if len(passed_points) != len(adj):
+        return False
     return True
 
 
