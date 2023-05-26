@@ -6,15 +6,17 @@ def read_graph_from_file(name):
         exit()
     try:
         graph = [[int(j) for j in i.split() if int(j) >= 0] for i in file.readlines()]
-        for i in graph:
-            if len(i) != len(graph):
-                raise ValueError
     except ValueError:
         print("Ошибка! В файле находятся некорректные данные!")
         exit()
     finally:
         file.close()
-
+    
+    for i in graph:
+        if len(i) != len(graph):
+            print("Ошибка! В файле находятся некорректные данные!")
+            exit()
+    
     for i in range(len(graph)):
         for j in range(len(graph)):
             if graph[i][j] != graph[j][i]:
