@@ -3,6 +3,7 @@ import numpy as np
 
 try:
     size = int(input("Введите размер матриц: "))
+    exit(-1)
 except ValueError:
     print("Введите число!")
 if size < 0:
