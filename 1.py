@@ -3,9 +3,9 @@ import numpy as np
 
 try:
     size = int(input("Введите размер матриц: "))
-    exit(-1)
 except ValueError:
     print("Введите число!")
+    exit(-1)
 if size < 0:
     print("Число должно быть > 0")
     exit(-1)
