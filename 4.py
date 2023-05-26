@@ -9,15 +9,14 @@ class Levels(Enum):
     
 def str_to_enum(lvl):
     lvl = lvl.decode("utf-8")
-    match lvl:
-        case 'Beginner Level':
-            return Levels.Beginner.value
-        case 'Intermediate Level':
-            return Levels.Intermediate.value
-        case 'Expert Level':
-            return Levels.Expert.value
-        case 'All Levels':
-            return Levels.All.value
+    if lvl == 'Beginner Level':
+        return Levels.Beginner.value
+    elif lvl == 'Intermediate Level':
+        return Levels.Intermediate.value
+    elif lvl == 'Expert Level':
+        return Levels.Expert.value
+    elif lvl == 'All Levels':
+        return Levels.All.value
 
 conv = {
     4: str_to_enum
